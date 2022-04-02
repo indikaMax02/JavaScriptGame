@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+
+        body{
+            position: fixed;
+            background-color: green;
+            display: flex;
+        }
+        #snake>img{
+            margin-left: 372px;
+            margin-bottom: 0px;
+            width: 987px;
+
+        }
+        #dashboard{
+            position: fixed;
+            top: 35px;
+            right: 73px;
+        }
+
+        #dashboard>h1{
+            font-family: "Agency FB";
+            font-size: 45px;
+        }
+        #dashboard>#startButton{
+            width: 200px;
+            height: 30px;
+            border-radius: 10px;
+            background-color: aqua;
+        }
+
+        #snakeGame{
+            background-color: darkslategray;
+            position: absolute;
+            box-shadow: black 20px 10px 50px;
+            left: 100px;
+            top: 20px;
+        }
+
+
+
+
+
+    </style>
+
+</head>
+<body>
+
+<section id="dashboard">
+    <h1>Snake Game</h1>
+    <ul>
+        <li>
+           <span>score :</span>
+           <span>0</span>
+        </li>
+        <li>
+            <span>speed :</span>
+            <span>1x</span>
+
+
+        </li>
+
+    </ul>
+
+    <button id="startButton" type="submit">Start</button>
+
+</section>
+
+<section id="snake">
+    <img src="assets/images/back.png" alt="">
+
+</section>
+
+<canvas id="snakeGame" width="400" height="400"/>
+<script src="js/index.js"></script>
+</body>
+</html>
