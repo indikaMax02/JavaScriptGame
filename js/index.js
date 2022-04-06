@@ -1,12 +1,12 @@
 const canvas=document.getElementById('snakeGame');
 const ctx=canvas.getContext('2d');
 
-class SnakePart{
+/*class SnakePart{
     constructor(x,y) {
         this.x=x;
         this.y=y;
     }
-}
+}*/
 
 let speed=7;
 
@@ -38,6 +38,7 @@ function drawGame() {
        checkAppleCollection();
        drawApple();
        drawSnake();
+
        setTimeout(drawGame,1000/ speed);
 }
 
@@ -93,6 +94,11 @@ function isGameOver() {
 function showScore() {
     score++;
    $('#score').text(score);
+
+   /* ctx.fillStyle='white';
+    ctx.font ='15px arial';
+
+    ctx.fillText("score"+score , canvas.width/2,canvas.height/2);*/
 
 }
 
