@@ -15,36 +15,36 @@
 
 <script>
 
-    var fps           = 60;                      // 'update' frames per second
-    var step          = 1/fps;                   // how long is each frame (in seconds)
-    var width         = 1024;                    // logical canvas width
-    var height        = 768;                     // logical canvas height
-    var segments      = [];                      // array of road segments
-    var canvas        = document.getElementById('canvas'); // our canvas...
-    var ctx           = canvas.getContext('2d'); // ...and its drawing context
-    var background    = null;                    // our background image (loaded below)
-    var sprites       = null;                    // our spritesheet (loaded below)
-    var resolution    = null;                    // scaling factor to provide resolution independence (computed)
-    var roadWidth     = 2000;                    // actually half the roads width, easier math if the road spans from -roadWidth to +roadWidth
-    var segmentLength = 200;                     // length of a single segment
-    var rumbleLength  = 3;                       // number of segments per red/white rumble strip
-    var trackLength   = null;                    // z length of entire track (computed)
-    var lanes         = 3;                       // number of lanes
-    var fieldOfView   = 100;                     // angle (degrees) for field of view
-    var cameraHeight  = 1000;                    // z height of camera
-    var cameraDepth   = null;                    // z distance camera is from screen (computed)
-    var drawDistance  = 300;                     // number of segments to draw
-    var playerX       = 0;                       // player x offset from center of road (-1 to 1 to stay independent of roadWidth)
-    var playerZ       = null;                    // player relative z distance from camera (computed)
-    var fogDensity    = 5;                       // exponential fog density
-    var position      = 0;                       // current camera Z position
-    var speed         = 0;                       // current speed
-    var maxSpeed      = segmentLength/step;      // top speed (ensure we can't move more than 1 segment in a single frame to make collision detection easier)
-    var accel         = maxSpeed/5;             // acceleration rate - tuned until it 'felt' right
-    var breaking      = -maxSpeed;               // deceleration rate when braking
-    var decel         = -maxSpeed/5;             // 'natural' deceleration rate when neither accelerating, nor braking
-    var offRoadDecel  = -maxSpeed/2;             // off road deceleration is somewhere in between
-    var offRoadLimit  =  maxSpeed/4;             // limit when off road deceleration no longer applies
+    var fps           = 60;
+    var step          = 1/fps;
+    var width         = 1024;
+    var height        = 768;
+    var segments      = [];
+    var canvas        = document.getElementById('canvas');
+    var ctx           = canvas.getContext('2d');
+    var background    = null;
+    var sprites       = null;
+    var resolution    = null;
+    var roadWidth     = 2000;
+    var segmentLength = 200;
+    var rumbleLength  = 3;
+    var trackLength   = null;
+    var lanes         = 3;
+    var fieldOfView   = 100;
+    var cameraHeight  = 1000;
+    var cameraDepth   = null;
+    var drawDistance  = 300;
+    var playerX       = 0;
+    var playerZ       = null;
+    var fogDensity    = 5;
+    var position      = 0;
+    var speed         = 0;
+    var maxSpeed      = segmentLength/step;
+    var accel         = maxSpeed/5;
+    var breaking      = -maxSpeed;
+    var decel         = -maxSpeed/5;
+    var offRoadDecel  = -maxSpeed/2;
+    var offRoadLimit  =  maxSpeed/4;
 
     var keyLeft       = false;
     var keyRight      = false;
@@ -58,7 +58,7 @@
 
         position = Util.increase(position, dt * speed, trackLength);
 
-        var dx = dt * 2 * (speed/maxSpeed); // at top speed, should be able to cross from left to right (-1 to 1) in 1 second
+        var dx = dt * 2 * (speed/maxSpeed); // at top speed, should be able to cross from left to right
         console.log(dx);
         if (keyLeft)
             playerX = playerX - dx;
