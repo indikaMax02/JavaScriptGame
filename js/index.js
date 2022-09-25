@@ -24,7 +24,13 @@ let xVelocity=0;
 let yVelocity=0;
 
 let score=0;
+//alert
+
+
+
 //game loop
+
+
 function drawGame() {
     changeSnakePosition();
 
@@ -74,7 +80,7 @@ function isGameOver() {
     }
 
     if (gameOver){
-        ctx.fillStyle= 'white';
+        /*ctx.fillStyle= 'white';
         ctx.font = '50px verdana'
         var gradient=ctx.createLinearGradient(0,0,canvas.width,0);
         gradient.addColorStop("0","magenta");
@@ -83,7 +89,9 @@ function isGameOver() {
 
         ctx.fillStyle=gradient;
 
-        ctx.fillText("Game Over!" , canvas.width/6.5,canvas.height/2)
+        ctx.fillText("Game Over!" , canvas.width/6.5,canvas.height/2)*/
+
+        janelaPopUp.abre( "example", 'p green',  'Game Over !' ,  'Your source : 40');
 
     }
 

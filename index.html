@@ -4,11 +4,13 @@
     <meta charset="UTF-8">
     <title>Title</title>
 
+    <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
     <style>
 
         body{
             position: fixed;
-            background-color: green;
+            background-color: #a6dea6;
             display: flex;
         }
         #snake>img{
@@ -19,8 +21,8 @@
         }
         #dashboard{
             position: fixed;
-            top: 35px;
-            right: 73px;
+            top: 92px;
+            right: 110px;
         }
 
         #dashboard>h1{
@@ -38,36 +40,43 @@
             background-color: darkslategray;
             position: absolute;
             box-shadow: black 20px 10px 50px;
-            left: 100px;
-            top: 20px;
+            left: 484px;
+            top: 98px;
         }
 
 
 
-
-
     </style>
+    <link rel="stylesheet" href="assets/css/header.css">
+    <link rel="stylesheet" href="assets/css/index.css">
 
 </head>
 <body>
+
+<header>
+
+    <nav class="navbar">
+        <ul>
+            <li><a href="#home">snake Game</a></li>
+            <li><a href="#about">2D car game</a></li>
+            <li><a href="#education">pin boll game</a></li>
+            <li><a href="#portfolio">3D car game</a></li>
+        </ul>
+    </nav>
+
+</header>
 
 <section id="dashboard">
     <h1>Snake Game</h1>
     <ul>
         <li>
-           <span>score :</span>
-           <span id="score">0</span>
+           <span style="font-size: 30px; ">score :</span>
+           <span style="font-size: 30px" id="score">0</span>
         </li>
-        <li>
-            <span>speed :</span>
-            <span>1x</span>
 
-
-        </li>
 
     </ul>
 
-    <button id="startButton" type="submit">Start</button>
 
 </section>
 
@@ -78,8 +87,12 @@
 
 <canvas id="snakeGame" width="400" height="400"/>
 
+
+
 <script src="jQuery/jquery-3.6.0.min.js"></script>
+<script src="js/topUp.js"></script>
 <script src="model/SnakePart.js"></script>
 <script src="js/index.js"></script>
+
 </body>
 </html>

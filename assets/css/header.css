@@ -1,0 +1,121 @@
+
+
+header{
+    position: fixed;
+    top:0; left:0;
+    z-index: 1000;
+    height:100%;
+    width:14rem;
+    background:linear-gradient(to left top, #3f8b2b, #42db86);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    text-align: center;
+    border-bottom-right-radius: 30px;
+
+
+}
+
+
+
+
+
+header .navbar{
+    width:100%;
+}
+
+header .navbar ul{
+    list-style: none;
+    padding:6rem 3rem;
+}
+
+
+header .navbar ul li a{
+    display: block;
+    padding:0.5rem;
+    margin:1.5rem 0;
+    /* From https://css.glass */
+    background: rgba(0, 0, 0, 0.24);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(20.7px);
+    -webkit-backdrop-filter: blur(12.7px);
+    color:#fff;
+    font-size: 1rem;
+    border-radius: 5rem;
+}
+
+header .navbar ul li a:hover{
+    background-color: #0a58ca;
+}
+
+
+@media (max-width:1200px){
+
+    html{
+        font-size: 55%;
+    }
+
+    .home{
+        padding:1rem 4rem;
+    }
+
+}
+
+@media (max-width:991px){
+
+    header{
+        left:-120%;
+    }
+
+    #menu{
+        display: block;
+    }
+
+    header.toggle{
+        left:0%;
+    }
+
+    body{
+        padding:0;
+    }
+
+}
+
+@media (max-width:768px){
+
+    html{
+        font-size: 50%;
+    }
+
+}
+
+@media (max-width:400px){
+
+    header{
+        width: 100vw;
+    }
+
+    .heading{
+        margin:0 3rem;
+    }
+
+    .about .row .counter .box{
+        width: 100%;
+    }
+
+    .education .box-container .box{
+        width:100%;
+    }
+
+    .portfolio .box-container .box{
+        width:100%;
+    }
+
+    .contact .row form{
+        margin:3rem 0;
+    }
+
+}
